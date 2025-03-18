@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <title>VR solar system | Marco Papaleo</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-sky src="planet_textures/nightsky.jpg"></a-sky>
+        <a-sphere id="sun" position="0 1.25 -5" radius="3" src="planet_textures/sun.jpeg" rotation="0 0 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 22224">
+        </a-sphere>
+        <a-sphere id="mercury" position="3.9 1.25 -5" , radius="0.1" src="planet_textures/mercury.jpeg" rotation="0 0 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 58650"></a-sphere>
+        <a-sphere id="venus" position="7.2 1.25 -5	" radius="0.2" src="planet_textures/venus.jpeg" rotation="0 0 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 243000">
+        </a-sphere>
+        <a-sphere id="earth" position="10 1.25 -5	" radius="0.3" src="planet_textures/earth.jpeg" rotation="0 0 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 864">
+        </a-sphere>
+        <a-sphere id="mars" position="15.2 1.25 -5	" radius="0.2" src="planet_textures/mars.jpeg" rotation="0 0 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 8864">
+        </a-sphere>
+        <a-sphere id="jupiter" position="52 1.25 -5	" radius="1.5	" src="planet_textures/jupiter.jpeg" rotation="0 0 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 3528"></a-sphere>
+        <a-sphere id="saturn" position="95 1.25 -5	" radius="1.2" src="planet_textures/saturn.jpeg" rotation="0 0 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 3952"></a-sphere>
+        <a-sphere id="uranus" position="192 1.25 -5	" radius="0.7	" src="planet_textures/uranus.jpeg" rotation="0 0 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 60480
+        "></a-sphere>
+        <a-sphere id="neptune" position="301 1.25 -5 " radius="0.7	" src="planet_textures/neptune.jpeg" rotation="0 0 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 54720"></a-sphere>
+    </a-scene>
+    <!-- position = X, Y, Z-->
+    <!-- Let's break down each of the properties in the rotation animation:
+
+rotation = "0 0 0" sets the initial rotation and ensures that the Sun begins its animation with no prior rotation, thus creating a clean and consistent starting point..
+The animation attribute rotates the Sun with the following sub-attributes:
+property: rotation indicates that the Sun should rotate.
+to: 0 360 0 specifies the final rotation angles in degrees along the x, y, and z axes. This means that the Sun completes a full 360-degree rotation around the y-axis.
+loop: true creates a continuous, cyclic motion and ensures the rotation animation repeats indefinitely.
+dur: 22224 sets the duration of the animation in milliseconds. Here, the Sun takes around 22 seconds to complete one full rotation. Adjusting this value will change the speed of the rotation: a longer duration slows down the rotation. You can change this to match and scale how the Sun rotates relative to other planets. -->
+</body>
+
+</html>
